@@ -64,6 +64,21 @@ public class AddressBook {
         System.out.println("Contact not found.");
     }
 
+    // Delete a contact using the person's first name
+    public void deleteContact(String firstName) {
+        for (int i = 0; i < contacts.size(); i++) {
+            Contact contact = contacts.get(i);
+
+            if (contact.getFirstName().equalsIgnoreCase(firstName)) {
+                contacts.remove(i);
+                System.out.println("Contact deleted successfully.");
+                return;
+            }
+        }
+
+        System.out.println("Contact not found.");
+    }
+
     public List<Contact> getContacts() {
         return new ArrayList<>(contacts);
     }

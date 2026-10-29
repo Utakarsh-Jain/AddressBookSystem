@@ -8,10 +8,13 @@ public class AddressBookMain {
 
         while (true) {
             System.out.println("\n===== Address Book Menu =====");
+
             System.out.println("1. Add Contact");
             System.out.println("2. Display Contacts");
             System.out.println("3. Edit Contact");
-            System.out.println("4. Exit");
+            System.out.println("4. Delete Contact");
+            System.out.println("5. Exit");
+
             System.out.print("Enter your choice: ");
 
             int choice;
@@ -67,13 +70,18 @@ public class AddressBookMain {
                     addressBook.editContact(nameToEdit, scanner);
                     break;
 
+
                 case 4:
+                    System.out.print("Enter first name of contact to delete: ");
+                    String nameToDelete = scanner.nextLine();
+                    addressBook.deleteContact(nameToDelete);
+                    break;
+
+                case 5:
                     System.out.println("Exiting Address Book.");
                     scanner.close();
                     return;
 
-                default:
-                    System.out.println("Invalid choice.");
             }
         }
     }
