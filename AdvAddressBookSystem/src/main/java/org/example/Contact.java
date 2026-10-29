@@ -69,4 +69,17 @@ public class Contact {
                 "\nPhone Number: " + phoneNumber +
                 "\nEmail: " + email;
     }
+
+    public void updateDetails(String lastName, String address,
+                              String city, String state, String zip,
+                              String phoneNumber, String email) {
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
 }
